@@ -18,6 +18,8 @@ $(document).ready(function () {
       $('#step-3456').append(responseData);
     }).fail(function() {
       $('#step-3456').append(" Sorry, I will try hard next time :(")
+    }).always(function() {
+      console.log('Hey the request finished!')
     });
   });
 });
