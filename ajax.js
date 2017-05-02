@@ -20,7 +20,18 @@ $(document).ready(function () {
       $('#step-3456').append(" Sorry, I will try hard next time :(")
       console.log('That was a fail!')
     }).always(function() {
-      console.log('Hey the request finished!')
+      console.log('Hey the request finished! It may have failed, it may have succeeded. Who knows?')
+    });
+
+    $('#step-7').on('click', function() {
+      $.ajax({
+        url: 'http://first-ajax-api.herokuapp.com/count',
+        method: 'GET',
+        dataType: 'text'
+      }).done(function(responseData) {
+        $('#step-7').append(responseData);
+        console.log('Request Successful')
+      });
     });
   });
 });
