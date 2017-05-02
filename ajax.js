@@ -10,14 +10,15 @@ $(document).ready(function () {
 
   $('#step-3456').on('click', function() {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/pong',
+      url: 'http://first-ajax-api.herokuapp.com/ping',
       method: 'GET',
       dataType: 'text'
     }).done(function(responseData) {
-      console.log(responseData);
       $('#step-3456').append(responseData);
+      console.log('It is done!')
     }).fail(function() {
       $('#step-3456').append(" Sorry, I will try hard next time :(")
+      console.log('That was a fail!')
     }).always(function() {
       console.log('Hey the request finished!')
     });
