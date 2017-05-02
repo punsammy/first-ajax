@@ -10,12 +10,14 @@ $(document).ready(function () {
 
   $('#step-3456').on('click', function() {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'GET',
       dataType: 'text'
     }).done(function(responseData) {
       console.log(responseData);
       $('#step-3456').append(responseData);
+    }).fail(function() {
+      $('#step-3456').append(" Sorry, I will try hard next time :(")
     });
   });
 });
