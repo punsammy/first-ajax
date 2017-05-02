@@ -1,21 +1,28 @@
 $(document).ready(function () {
 
-  $.ajax({
-    url: 'http://first-ajax-api.herokuapp.com/',
-    method: 'GET',
-    // data: ,
-    // dataType:
-    }).done(function(data) {
-      console.log('DONE')
-    }).fail(function(jqXHR, testStatus) {
-      console.log('FAILED' + jqXHR.status + '' + jqXHR.statusText);
-      console.log(jqXHR);
-    }).always(function() {
-      console.log('REQUEST FINISHED')
+  $('#step-1-2').on('click', function(){
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/',
+      method: 'GET',
+      dataType: 'text'
     });
+  });
 });
 
 
+// $.ajax({
+//   url: 'http://first-ajax-api.herokuapp.com/',
+//   method: 'GET',
+//   // data: ,
+//   // dataType:
+// }).done(function(data) {
+//   console.log('DONE')
+// }).fail(function(jqXHR, testStatus) {
+//   console.log('FAILED' + jqXHR.status + '' + jqXHR.statusText);
+//   console.log(jqXHR);
+// }).always(function() {
+//   console.log('REQUEST FINISHED')
+// });
 
 
 
