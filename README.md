@@ -17,8 +17,11 @@ The URLs within the server (AKA 'endpoints', AKA 'resources') we're going to wor
 Each time you use one of these paths, you will have to use the fully-qualified URL. For example: http://first-ajax-api.herokuapp.com/count
 
 Knowledge Check
-1. What HTTP method did your browser use to make the request? GET
-2. How many milliseconds did it take your browser to complete it? 81ms
+1. What HTTP method did your browser use to make the request?
+GET
+2. How many milliseconds did it take your browser to complete it?
+81ms
 3. What HTTP status code did the server return? What does that mean? 200 which means its "OK" and the request has succeeded.
 4. Look at the "Initiator" and "Type" columns. Was this an xhr/JavaScript/AJAX request or a normal browser request?
 Type: Document, Initiator: Other
+Normal browser

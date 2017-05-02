@@ -1,10 +1,21 @@
 $(document).ready(function () {
 
-  $('#step-1-2').on('click', function(){
+  $('#step-12').on('click', function(){
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/',
       method: 'GET',
       dataType: 'text'
+    });
+  });
+
+  $('#step-3456').on('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/ping',
+      method: 'GET',
+      dataType: 'text'
+    }).done(function(responseData) {
+      console.log(responseData);
+      $('#step-3456').append(responseData);
     });
   });
 });
