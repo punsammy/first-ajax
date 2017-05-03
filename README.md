@@ -25,3 +25,10 @@ GET
 4. Look at the "Initiator" and "Type" columns. Was this an xhr/JavaScript/AJAX request or a normal browser request?
 Type: Document, Initiator: Other
 Normal browser
+
+
+
+Step-9 Questions:
+1. Investigate the Request and Response "Headers" in your Network Tab. What is the 'Accepts' of the Request, and the 'Content-Type' of the response?
+X-Content-Type-Options:nosniff
+Accept:text/html, */*; q=0.01
