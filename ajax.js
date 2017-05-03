@@ -21,18 +21,34 @@ $(document).ready(function () {
       console.log('That was a fail!')
     }).always(function() {
       console.log('Hey the request finished! It may have failed, it may have succeeded. Who knows?')
-    });
+  });
 
-    $('#step-7').on('click', function() {
-      $.ajax({
-        url: 'http://first-ajax-api.herokuapp.com/count',
-        method: 'GET',
-        dataType: 'text'
-      }).done(function(responseData) {
-        $('#step-7').append(responseData);
-        console.log('Request Successful')
-      });
+  $('#step-7').on('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/count',
+      method: 'GET',
+      dataType: 'text'
+    }).done(function(responseData) {
+      $('#step-7').append(responseData);
+      console.log('Request Successful')
     });
+  });
+
+  $('#step-8').on('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'GET',
+      data: { timezone: 'Pacific/Honolulu' },
+      dataType: 'text'
+    }).done(function(responseData) {
+      $('#step-8').append(responseData);
+      console.log('Request Successful')
+    });
+  });
+
+
+
+
   });
 });
 
