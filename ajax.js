@@ -27,6 +27,7 @@ $(document).ready(function () {
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/count',
       method: 'GET',
+      data: { amount: '1' },
       dataType: 'text'
     }).done(function(responseData) {
       $('#step-7').append(responseData);
@@ -56,8 +57,17 @@ $(document).ready(function () {
     });
   });
 
-  // X-Content-Type-Options:nosniff
-  // Accept:text/html, */*; q=0.01
+  $('#_stretch').on('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/pong',
+      method: 'GET',
+      dataType: 'html'
+    }).done(function() {
+      console.log('Yay it worked!')
+    }).fail(function() {
+      console.log('Try again')
+    });
+  });
 
 
 
